@@ -1,0 +1,16 @@
+- title: Home
+  url: "/"
+  side: left
+  mediaplayer: false
+  
+- title: Blog
+  url: "/blog/"
+  side: left
+  dropdown:
+  - title: "文章列表"
+    url: "/blog/archive/"
+      
+- title: "Search"
+  url: "/search/"
+  side: right
+
