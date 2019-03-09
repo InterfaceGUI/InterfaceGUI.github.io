@@ -4,7 +4,7 @@ subheadline:  "DiscordBOT"
 title:  "使用vb製作一個屬於自己的DsicordBOT (一)"
 teaser: "製作第一個DiscordBOT! "
 image:  
-    thumb: "https://techwolf.blob.core.windows.net/techwolf-access/8ba2f23adc3fe81087a02454a64bdd097b5aec7d.png"
+    thumb: "discord.png" 
 categories:
     - vb
 tags:
