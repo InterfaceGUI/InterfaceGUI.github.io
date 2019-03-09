@@ -375,4 +375,4 @@ End Class
 
 [Form1listview]:https://InterfaceGUI.github.io/images/Form1-listview.png
 
-[FinalResults]:https://InterfaceGUI.github.io/images/
+[FinalResults]:https://InterfaceGUI.github.io/images/FinalResults.png
