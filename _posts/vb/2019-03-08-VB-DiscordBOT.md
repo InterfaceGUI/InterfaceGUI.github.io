@@ -8,7 +8,7 @@ image:
 categories:
     - vb
 tags:
-    - VB.NET Discord.NET DiscordBOT
+    - VB.NETDiscrd Discord.NET DiscordBOT Dsicord機器人
 ---
 
 <!--more-->
@@ -236,23 +236,37 @@ Public Class Form1
     End Sub
 
     Private Function Loggedin() As Task
+
+        Label1.Invoke(Sub(x) Label1.Text = x, "線上Online") '匿名委派
+        Label1.Invoke(Sub(x) Label1.BackColor = x, Drawing.Color.MediumSpringGreen)
+        '由於有 Imports Discord ，Color 會被 Discord.Color 給占走 要用原本的color 要在前面加上Drawing
+
         Dim item As New ListViewItem
         item.Text = Date.Now
         item.ForeColor = Drawing.Color.Green
         item.SubItems.Add("資訊")
         item.SubItems.Add("系統")
         item.SubItems.Add("以成功登入")
+
         UpdateListview(item)
+
     End Function
 
     Private Function LoggedOut() As Task
+
+        Label1.Invoke(Sub(x) Label1.Text = x, "離線Offline") '匿名委派
+        Label1.Invoke(Sub(x) Label1.BackColor = x, Drawing.Color.Silver)
+
+
         Dim item As New ListViewItem
         item.Text = Date.Now
         item.ForeColor = Drawing.Color.Green
         item.SubItems.Add("資訊")
         item.SubItems.Add("系統")
         item.SubItems.Add("以成功登出")
+
         UpdateListview(item)
+
     End Function
 
     Private Async Function msgReceived(msg As SocketMessage) As Task
@@ -281,10 +295,12 @@ Public Class Form1
         End If
 
         Dim item As New ListViewItem
-        item.Text = Date.Now
-        item.SubItems.Add("訊息")
-        item.SubItems.Add(User.Username)
-        item.SubItems.Add(msg.Content)
+        With item
+            .Text = Date.Now
+            .SubItems.Add("訊息")
+            .SubItems.Add(User.Username)
+            .SubItems.Add(msg.Content)
+        End With
         UpdateListview(item)
 
     End Function
@@ -298,6 +314,7 @@ Public Class Form1
             ListView1.Items.Add(item)
         End If
     End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         isStart = Not isStart
@@ -308,24 +325,21 @@ Public Class Form1
 
                 discord.LoginAsync(TokenType.Bot, "NTUzNDExNjg4MjQyODcyMzMw.D2OQCA.7l6z4aY_-0FCfZs3IISq6MMod8c")
                 discord.StartAsync()
-                Label1.Text = "線上Online"
-                Label1.BackColor = Drawing.Color.MediumSpringGreen   '由於有 Imports Discord ，Color 會被 Discord.Color 給占走 要用原本的color 要在前面加上Drawing
-
+                Button1.Text = "停止"
             Catch ex As Exception
 
                 MsgBox(ex.Message)
                 isStart = False
-
+                Button1.Text = "啟動"
                 Exit Sub
 
             End Try
 
         Else
-
+            Button1.Text = "啟動"
             discord.LogoutAsync()
             discord.StopAsync()
-            Label1.BackColor = Drawing.Color.Silver
-            Label1.Text = "離線Offline"
+
 
         End If
 
@@ -338,6 +352,7 @@ Public Class Form1
 
     End Sub
 End Class
+
 ```
 
 
