@@ -65,19 +65,11 @@ paginate_path: "blog/page:num"   # Pagination path › Important for blog page i
 # Theme works best with Kramdown (using the table of contents function)
 markdown: kramdown
 permalink: /:categories/:title/
-
-
-
 kramdown:
-  input:          GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: 'highlight'
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
+    syntax_highlighter_opts:
+        block:
+            line_numbers: true
+            start_line: 1
 
 
 excerpt_separator: "<!--more-->"
