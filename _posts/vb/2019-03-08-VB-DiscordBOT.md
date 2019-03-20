@@ -2,7 +2,7 @@
 layout: page-fullwidth
 subheadline:  "DiscordBOT"
 title:  "使用vb製作一個屬於自己的DsicordBOT (一)"
-teaser: "製作第一個DiscordBOT! "
+teaser: "製作第一個 Discord BOT ! "
 image:  
     thumb: "discord.png" 
 categories:
@@ -13,7 +13,7 @@ tags:
 
 <!--more-->
 <div class="row">
-<div class="medium-4 medium-push-8 columns" markdown="1">
+<div class="medium-3 medium-push-10 columns" markdown="1">
 <div class="panel radius" markdown="1">
 **Table of Contents**
 {: #toc }
@@ -21,7 +21,7 @@ tags:
 {:toc}
 </div>
 </div><!-- /.medium-4.columns -->
-<div class="medium-8 medium-pull-4 columns" markdown="1">
+<div class="medium-9 medium-pull-3 columns" markdown="1">
 
 
 ## 1.HelloWorld
@@ -29,25 +29,26 @@ tags:
 ### #創建一個Discord應用程式 
 
 1.前往 [Discord Developer Portal - MY APPLICATIONS](https://discordapp.com/developers/applications) <br>
-![img][MY-APPLICATIONS]
+[![][MY-APPLICATIONS]][MY-APPLICATIONS]
+
 2.點選 `New Applications` 並且取一個名子 <br>
 
-![img][CREATE-AN-APPLICATION]
+[![img][CREATE-AN-APPLICATION]][CREATE-AN-APPLICATION]
 
 之後進入你的應用設定頁面，左側找到`Bots` 選項按下`Add Bot`<br>
 
-![img][BUILD-A-BOT]
+[![img][BUILD-A-BOT]][BUILD-A-BOT]
 
 3.前往`OAuth2`介面
 
 在`SCOPES` 欄位勾選BOT，下方就會生成邀請網址。<br>
 在`BOT PERMISSIONS`這裡可以設定BOT預設要求權限
 
-![img][OAuth2_URL]
+[![img][OAuth2_URL]][OAuth2_URL]
 
 然後就可以用邀請用連結邀請到你的伺服器了!
 
-![img][Bot]
+[![img][Bot]][Bot]
 
 
 ### #安裝Disocrd.NET 
@@ -77,7 +78,7 @@ Public Class Form1
     End Sub
 End Class
 ```
-這樣啟動表單 查看你的Discord 看看BOT有沒有上限瞜!
+這樣啟動表單 查看你的Discord 看看BOT有沒有上線瞜!
 
 <br>
 
@@ -95,7 +96,7 @@ End Function
 ```
 執行效果如下
 
-![img][TestMessage]
+[![img][TestMessage]][TestMessage]
 
 <br>
 
@@ -132,7 +133,7 @@ End Function
 ```
 執行效果如下
 
-![img][commandTest]
+[![img][commandTest]][commandTest]
 
 <br>
 
@@ -141,7 +142,7 @@ End Function
 
 這裡以 Listview 示範，資料行如下圖有四個。
 
-![img][Form1listview]
+[![img][Form1listview]][Form1listview]
 
 先建立一個拿來更新 Listview 的方法，如同下面的 UpdateListview，然後再建立一個有相同 signature 的委派，下面叫 MyListViewCallBack 。
 
@@ -208,7 +209,7 @@ End Function
     End Sub
 ```
 
-![img][FinalResults]
+[![img][FinalResults]][FinalResults]
 
 
 
@@ -374,20 +375,20 @@ End Class
 
 
 
-[MY-APPLICATIONS]:https://InterfaceGUI.github.io/images/MY-APPLICATIONS.png
+[MY-APPLICATIONS]:https://InterfaceGUI.github.io/images/DiscordBOT_1/MY-APPLICATIONS.png
 
-[CREATE-AN-APPLICATION]:https://InterfaceGUI.github.io/images/CREATE-AN-APPLICATION.png
+[CREATE-AN-APPLICATION]:https://InterfaceGUI.github.io/images/DiscordBOT_1/CREATE-AN-APPLICATION.png
 
-[BUILD-A-BOT]:https://InterfaceGUI.github.io/images/BUILD-A-BOT.png
+[BUILD-A-BOT]:https://InterfaceGUI.github.io/images/DiscordBOT_1/BUILD-A-BOT.png
 
-[OAuth2_URL]:https://InterfaceGUI.github.io/images/OAuth2_URL.png
+[OAuth2_URL]:https://InterfaceGUI.github.io/images/DiscordBOT_1/OAuth2_URL.png
 
-[Bot]:https://InterfaceGUI.github.io/images/Bot.png
+[Bot]:https://InterfaceGUI.github.io/images/DiscordBOT_1/Bot.png
 
-[TestMessage]:https://InterfaceGUI.github.io/images/TestMessage.png
+[TestMessage]:https://InterfaceGUI.github.io/images/DiscordBOT_1/TestMessage.png
 
-[commandTest]:https://InterfaceGUI.github.io/images/commandTest.png
+[commandTest]:https://InterfaceGUI.github.io/images/DiscordBOT_1/commandTest.png
 
-[Form1listview]:https://InterfaceGUI.github.io/images/Form1-listview.png
+[Form1listview]:https://InterfaceGUI.github.io/images/DiscordBOT_1/Form1-listview.png
 
-[FinalResults]:https://InterfaceGUI.github.io/images/FinalResults.png
+[FinalResults]:https://InterfaceGUI.github.io/images/DiscordBOT_1/FinalResults.png

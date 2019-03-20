@@ -16,7 +16,33 @@
 /* xml attr name */ pre .atn, code .atn { color: #00FF85; } 
 /* xml attr value */pre .atv, code .atv { color: #FF8000; } 
 /* decimal */       pre .dec, code .dec { color: #FF00FF; } 
+table.rouge-table{
+	background: #272822;
+	padding: 0px;
+	margin-bottom: 0rem;
+	border: solid 0px #ddd;
+	table-layout: auto;
+	color: #fff;
+}
+pre.lineno{
+	border-right: 1px solid #656565;
+}
+.rouge-code pre{
+	margin-bottom: 0rem;
+}
 
+td.rouge-gutter ,td.rouge-code{
+	padding: .5625rem .625rem 0px;
+}
+pre.lineno{
+	color: rgb(24, 115, 151);
+}
+pre code{
+	padding: 0;
+}
+pre.highlight{
+	margin-bottom: 0rem;
+}
 .highlight {
 	tab-size: 4;
 	.hll   /* Highligh Line */               { border: 1px ridge $primary-color; padding: 2px; }
