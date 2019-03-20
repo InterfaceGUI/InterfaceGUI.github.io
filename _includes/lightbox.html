@@ -91,7 +91,7 @@
     -o-transform: rotate(45deg);
     }
     .lightbox, .lightbox * {
-        -webkit-user-select: auto ; 
+        -webkit-user-select: none;  
         -moz-user-select: none;    
         -ms-user-select: none;      
         user-select: none;
@@ -193,20 +193,5 @@
         
     });
     
-    $(document).keydown(function(e) {
-        switch(e.which) {
-            case 37: // left
-            $("#prev").click();
-            break;
-            case 39: // right
-            $("#next").click();
-            break;
-        case 27: // esc
-            $("#close").click();
-            break;
-            default: return; // exit this handler for other keys
-        }
-        e.preventDefault(); // prevent the default action (scroll / move caret)
-    });
     
     </script>
