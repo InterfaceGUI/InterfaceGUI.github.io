@@ -75,7 +75,7 @@ kramdown:
       line_numbers: false
     block:
       css_class: 'highlighter-rouge'
-      line_numbers: true
+      line_numbers: false
       first-line: 1
 
 
