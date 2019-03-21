@@ -74,7 +74,7 @@ kramdown:
     span:
       line_numbers: false
     block:
-      css_class: 'highlight'
+      css_class: 'highlighter-rouge'
       line_numbers: true
       first-line: 1
 
