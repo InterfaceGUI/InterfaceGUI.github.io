@@ -175,5 +175,17 @@ format: page-fullwidth
 <script src="https://techwolf.blob.core.windows.net/techwolf-access/LightBOX.js"></script>
 
 
-
-
+<script>
+	$('div.highlighter-rouge').each(function( index )
+	{
+	  var codetype = $(this).attr( 'class' ).replace("highlighter-rouge", "").replace("language-","").trim().toUpperCase()
+	  var hilite = $(this);
+	  hilite.wrap("<div class=\"highlight\"></div>");
+	  if(codetype)
+	  {
+		hilite.before( "<span class=\"codelabel\"> Code: <strong>"+codetype+"</strong> </span>" );
+	  }else{
+		hilite.before( "<span class=\"codelabel\"> <strong>Code</strong> </span>" );
+	  }
+	});
+</script>
