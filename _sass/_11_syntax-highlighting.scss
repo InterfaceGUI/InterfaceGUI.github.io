@@ -16,6 +16,16 @@
 /* xml attr name */ pre .atn, code .atn { color: #00FF85; } 
 /* xml attr value */pre .atv, code .atv { color: #FF8000; } 
 /* decimal */       pre .dec, code .dec { color: #FF00FF; } 
+code.highlighter-rouge{
+	background-color: rgb(230, 227, 227);
+	color: rgb(82, 83, 11);
+	border-radius: 0px;
+	font-weight: 300;
+	border-width: 0px;
+}
+body.page-fullwidth{
+	background: #ffffff;
+}
 table.rouge-table{
 	background: #272822;
 	padding: 0px;
@@ -114,4 +124,13 @@ pre.highlight{
 	.sx    /* Literal.String.Other */        { color: red; }
 	.sr    /* Literal.String.Regex */        { color: #FF8000; border-bottom: 1px #FF8000 dotted; }
 	.ss    /* Literal.String.Symbol */       { color: red; }
+}
+.codelabel
+{
+	background-color:#268bd2;
+}
+.codelabel
+{
+	padding: 0.5em 0.15em 0.2em 0.2em;
+	color: #FFF;
 }
