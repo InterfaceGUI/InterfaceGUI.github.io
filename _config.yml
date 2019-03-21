@@ -70,7 +70,8 @@ kramdown:
   highlighter: rouge
   syntax_highlighter_opts:
     block:
-      line_numbers: true
+      line_numbers: false
+      first-line: 1
 
 
   
