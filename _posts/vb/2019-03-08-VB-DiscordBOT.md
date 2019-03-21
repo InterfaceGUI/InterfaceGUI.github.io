@@ -392,3 +392,4 @@ End Class
 [Form1listview]:https://InterfaceGUI.github.io/images/DiscordBOT_1/Form1-listview.png
 
 [FinalResults]:https://InterfaceGUI.github.io/images/DiscordBOT_1/FinalResults.png
+</div>
