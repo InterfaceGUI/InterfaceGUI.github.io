@@ -125,10 +125,7 @@ pre.highlight{
 	.sr    /* Literal.String.Regex */        { color: #FF8000; border-bottom: 1px #FF8000 dotted; }
 	.ss    /* Literal.String.Symbol */       { color: red; }
 }
-.codelabel
-{
-	background-color:#268bd2;
-}
+
 .codelabel
 {
 	padding: 0.35em 0.15em 0.23em 0.2em;
@@ -137,5 +134,6 @@ pre.highlight{
     position: relative;
     float: right;
     top: -2.1rem;
-    left: -4.5rem;
+	left: -4.5rem;
+	background-color:#268bd2;
 }
