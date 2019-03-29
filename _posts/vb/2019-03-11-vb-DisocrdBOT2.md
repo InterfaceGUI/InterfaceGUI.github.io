@@ -25,7 +25,7 @@ tags:
 
 ## 2.傳送訊息!
 
-### #SendMessageAsync()
+### SendMessageAsync()
 
 `SendMessageAsync()` 有以下幾個參數:
 * `text as String = nothing`<br>
@@ -43,7 +43,7 @@ tags:
     <br>
     
 ***
-### #SendFile 傳送檔案
+### SendFile 傳送檔案
 
 傳送檔案需要使用到`SendFileAsync()`
 參數:
@@ -156,7 +156,7 @@ End Sub
 
 ***
 
-### #DirectMessage 私訊
+### DirectMessage 私訊
 
 首先需要取得用戶，
 `SocketUser` 以及 `SocketGuildUser`。
@@ -183,7 +183,7 @@ discord.GetGuild(1234).GetUser(5678).SendMessageAsync("Hello!")
 
 ***
 
-### #Embed 嵌入式訊息
+### Embed 嵌入式訊息
 
 傳送Embed 需要先宣告一個 `EmbedBuilder`
 

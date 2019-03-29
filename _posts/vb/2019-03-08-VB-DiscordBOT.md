@@ -26,7 +26,7 @@ tags:
 
 ## 1.HelloWorld
 
-### #創建一個Discord應用程式 
+### 創建一個Discord應用程式 
 
 1.前往 [Discord Developer Portal - MY APPLICATIONS](https://discordapp.com/developers/applications) <br>
 [![][MY-APPLICATIONS]][MY-APPLICATIONS]
@@ -51,7 +51,7 @@ tags:
 [![img][Bot]][Bot]
 
 
-### #安裝Disocrd.NET 
+### 安裝Disocrd.NET 
 <br>
 首先建立一個VB 的WPF專案 然後點選 <br> 
 `工具 -> NuGet套件套件管理員 -> 管理方案的 NuGet 套件`
@@ -61,7 +61,7 @@ tags:
 
 <br>
 
-### #建立連接 & 啟動BOT
+### 建立連接 & 啟動BOT
 
 ```vb
 Public Class Form1
@@ -82,7 +82,7 @@ End Class
 
 <br>
 
-#### #聊天室訊息事件
+#### 聊天室訊息事件
 再來要接收聊天室訊息，需要先有一個事件來接收(`MessageReceived`)。
 在Form1_Load 加上 事件
 ```vb
@@ -100,7 +100,7 @@ End Function
 
 <br>
 
-#### #指令
+#### 指令
 
 ```vb
 Dim prefix As String = "!"
@@ -137,7 +137,7 @@ End Function
 
 <br>
 
-#### #紀錄聊天訊息
+#### 紀錄聊天訊息
 由於`Private Async Function msgReceived(msg As SocketMessage) As Task` 是一個**跨執行續的Func**，這裡如果要用到 ListView 或是 DataGridViewr <br>(應該是所有**跨執行續更新UI**) 都需要使用**委派(Delegate)**。
 
 這裡以 Listview 示範，資料行如下圖有四個。
