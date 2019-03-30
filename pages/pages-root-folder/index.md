@@ -13,7 +13,13 @@ widget2:
   url: 'https://github.com/InterfaceGUI/pyisPLC-modbus'
   image: "https://interfacegui.github.io/images/py-isPLC.png"
   text: '一個python的isPLC 通訊控制模組<br>這模組可以用於電腦 或是 RPI(樹梅派) 控制isPLC，<br>把isPLC當成IO板使用。...'
-#  video: '<a href="#" data-reveal-id="videoModal"><img src="http://phlow.github.io/feeling-responsive/images/start-video-feeling-responsive-302x182.jpg" width="302" height="182" alt=""/></a>'
+widget3:
+  title: "Python-DiscordPlurkBOT"
+  url: 'https://github.com/InterfaceGUI/Python-DiscordPlurkBOT'
+  image: ""
+  text: '一個同步噗浪訊息到Discord上的BOT，這個BOT會去抓取Plurk時間軸上的噗，當有新的噗就會同步到Discord上面， ...'
+  video: '<a href="#" data-reveal-id="videoModal"><img src="https://interfacegui.github.io/images/py-DiscordPlurkBOT.png" width="302" height="182" alt=""/></a>'
+
 #widget3:
 #  title: "Download Theme"
 #  url: 'https://github.com/Phlow/feeling-responsive'
@@ -22,10 +28,11 @@ widget2:
 homepage: true
 permalink: /index.html
 
-#<div id="videoModal" class="reveal-modal large" data-reveal="">
-#  <div class="flex-video widescreen vimeo" style="display: block;">
-#    <iframe width="1280" height="720" src="https://www.youtube.com/embed/3b5zCFSmVvU" frameborder="0" allowfullscreen></iframe>
-#  </div>
-#  <a class="close-reveal-modal">&#215;</a>
-#</div>
 ---
+
+<div id="videoModal" class="reveal-modal large" data-reveal="">
+  <div class="flex-video widescreen vimeo" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/ROC5BS-2o7Q" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
