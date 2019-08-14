@@ -1,0 +1,276 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>isPLC網頁監控展示</title>
+    <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://techwolf.blob.core.windows.net/techwolf-access/workshop/Style.css">
+
+    <link rel="stylesheet" href="./Style.css">
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!--
+    [S]
+        M0 -> Door          |[READ]
+        M1 -> AirCon PWR    |   X1 = Door       
+        M2 -> AirCon Up     |   X2 = window
+        M3 -> AirCon Down   |   x3 = window
+        M4 -> L1            |
+        M5 -> l2            |
+        M6 -> FAN1          |
+        M7 -> FAN2          |
+-->
+
+
+</head>
+
+
+
+<body>
+    <!--
+████████╗███████╗ ██████╗██╗  ██╗██╗    ██╗ ██████╗ ██╗     ███████╗
+╚══██╔══╝██╔════╝██╔════╝██║  ██║██║    ██║██╔═══██╗██║     ██╔════╝
+   ██║   █████╗  ██║     ███████║██║ █╗ ██║██║   ██║██║     █████╗  
+   ██║   ██╔══╝  ██║     ██╔══██║██║███╗██║██║   ██║██║     ██╔══╝  
+   ██║   ███████╗╚██████╗██║  ██║╚███╔███╔╝╚██████╔╝███████╗██║     
+   ╚═╝   ╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚══╝╚══╝  ╚═════╝ ╚══════╝╚═╝     
+
+$$$$$$$\                      $$\                     
+$$  __$$\                     \__|                    
+$$ |  $$ | $$$$$$\   $$$$$$$\ $$\  $$$$$$\  $$$$$$$\  
+$$ |  $$ |$$  __$$\ $$  _____|$$ |$$  __$$\ $$  __$$\ 
+$$ |  $$ |$$$$$$$$ |\$$$$$$\  $$ |$$ /  $$ |$$ |  $$ |
+$$ |  $$ |$$   ____| \____$$\ $$ |$$ |  $$ |$$ |  $$ |
+$$$$$$$  |\$$$$$$$\ $$$$$$$  |$$ |\$$$$$$$ |$$ |  $$ |
+\_______/  \_______|\_______/ \__| \____$$ |\__|  \__|
+                                  $$\   $$ |          
+                                  \$$$$$$  |          
+                                   \______/           
+                                                                    
+    TechWolf Design
+    website:
+        Github : https://github.com/InterfaceGUI
+
+-->
+
+    <h1>isPLC網頁監控展示</h1>
+
+    <script src="https://techwolf.blob.core.windows.net/techwolf-access/workshop/Refresh.js"></script>
+
+
+
+
+    <h2 id="remote">遙控</h2>
+    <div class="Control-Panel">
+
+        <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+        <table border="5" id="switch-table">
+            <tr>
+                <td align="center" rowspan="2">
+                    <p id="SWlabel"> 電 燈</p>
+                </td>
+                <td align="center">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="Lamp1" class="onoffswitch-checkbox" id="M4">
+                        <label class="onoffswitch-label" for="M4">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+
+                <td align="center">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="Lamp2" class="onoffswitch-checkbox" id="M5">
+                        <label class="onoffswitch-label" for="M5">
+                            <span class="onoffswitch-innerA"></span>
+                            <span class="onoffswitch-switchA"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" rowspan="2">
+                    <p id="SWlabel">電 扇</p>
+                </td>
+                <td align="center">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="FAN1" class="onoffswitch-checkbox" id="M6">
+                        <label class="onoffswitch-label" for="M6">
+                            <span class="onoffswitch-innerB"></span>
+                            <span class="onoffswitch-switchB"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="FAN2" class="onoffswitch-checkbox" id="M7">
+                        <label class="onoffswitch-label" for="M7">
+                            <span class="onoffswitch-innerC"></span>
+                            <span class="onoffswitch-switchC"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" rowspan="3">
+                    <p id="Swlabel">冷 氣</p>
+                </td>
+                <td align="center">
+                    <input id="AC-power" class="AC-power myButton" type="button" value="Power">
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <input id="AC-up" class="AC-up myButton" type="button" value="&nbsp;升 溫&nbsp;">
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <input id="AC-down" class="AC-down myButton" type="button" value="&nbsp;降 溫&nbsp;">
+                </td>
+            </tr>
+        </table>
+        <script>
+            $(function () {
+                $('#AC-power').on('click', function () {
+                    $.post("http://$MyIP$/", { M3: "ON" });
+                });
+                $('#AC-up').on('click', function () {
+                    $.post("http://$MyIP$/", { M2: "ON" });
+                });
+                $('#AC-down').on('click', function () {
+                    $.post("http://$MyIP$/", { M1: "ON" });
+                });
+            });
+        </script>
+        <script>
+            var soM4 = 0;
+            var soM5 = 0;
+            var soM6 = 0;
+            var soM7 = 0;
+            function RefreshButton() {
+                var stateM4 = document.getElementById("RefreshD1").textContent.charAt(3);
+                if (soM4 === stateM4) {
+                } else {
+
+                    soM4 = stateM4;
+                    if (stateM4 === "1") {
+                        document.getElementById("M5").checked = true;
+                    } else {
+                        document.getElementById("M5").checked = false;
+                    }
+
+                }
+
+                var stateM5 = document.getElementById("RefreshD2").textContent.charAt(3);
+                if (soM5 === stateM5) {
+                } else {
+                    soM5 = stateM5;
+                    if (stateM5 === "1") {
+                        document.getElementById("M4").checked = true;
+                    } else {
+                        document.getElementById("M4").checked = false;
+                    }
+
+                }
+
+                var stateM6 = document.getElementById("RefreshM").textContent.charAt(16);
+                if (soM6 === stateM6) {
+                } else {
+                    soM6 = stateM6;
+                    if (stateM6 === "1") {
+                        document.getElementById("M6").checked = true;
+                    } else {
+                        document.getElementById("M6").checked = false;
+                    }
+
+                }
+
+                var stateM7 = document.getElementById("RefreshM").textContent.charAt(15);
+                if (soM7 === stateM7) {
+                } else {
+
+                    soM7 = stateM7;
+                    if (stateM7 === "1") {
+                        document.getElementById("M7").checked = true;
+                    } else {
+                        document.getElementById("M7").checked = false;
+                    }
+
+                }
+
+            }
+            var t1 = window.setInterval(RefreshButton, 100);
+            $(function () {
+                $('#M4').bind('change', function () {
+
+                    if ($(this).is(':checked')) {
+                        var state = "OFF";
+                    } else {
+                        var state = "ON";
+                    }
+                    $.post("http://$MyIP$/", { M4: state });
+                });
+                $('#M5').bind('change', function () {
+                    if ($(this).is(':checked')) {
+                        var state = "OFF";
+                    } else {
+                        var state = "ON";
+                    }
+                    $.post("http://$MyIP$/", { M5: state });
+                });
+                $('#M6').bind('change', function () {
+                    console.log($(this).is(':checked'));
+                    if ($(this).is(':checked')) {
+                        var state = "1";
+                    } else {
+                        var state = "2";
+                    }
+                    $.post("http://$MyIP$/", { D3: state });
+                });
+                $('#M7').bind('change', function () {
+                    if ($(this).is(':checked')) {
+                        var state = "1";
+                    } else {
+                        var state = "2";
+                    }
+                    $.post("http://$MyIP$/", { D4: state });
+                });
+            });
+
+
+
+
+
+        </script>
+    </div>
+
+    <div>
+        <div>
+
+        </div>
+
+    </div>
+    <div id="refresh"></div>
+
+
+    <style>
+
+    </style>
+    <div id="BH-footer">
+        <div id="maintenance">
+            <a href="http://$MyIP$/maintenance/">維護入口</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

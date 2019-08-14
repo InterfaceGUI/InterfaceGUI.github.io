@@ -1,0 +1,180 @@
+body{
+    font-family: "fantasy", "bold", sans-serif;
+    text-align: center;
+    background-image: url("https://techwolf.blob.core.windows.net/techwolf-access/workshop/7885.jpg_wh1200.png");
+    background-color: rgba(50,50,50,0.2);
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    
+
+}
+
+h1 {
+    font-weight:bold;
+    font: "微軟正黑體";
+    color: #78e200;
+    font-size: 48px;
+    text-shadow: 1px 1px 1px #0000+00;
+
+}
+
+
+.Control-Panel #switch-table #SWlabel{
+    font: "微軟正黑體";
+    font-size: 30px;
+    top: 0px;
+    line-height:28px;
+    font-weight:1000;
+    color: rgb(255, 255, 255);
+
+    
+}
+
+.Control-Panel #switch-table{
+    width: 300px;
+    border-color:rgba(14, 172, 0,0.5);
+    margin:0px auto;
+    background-color:rgba(14, 172, 0,0.5);
+}
+
+
+
+
+#BH-footer {
+    height: 5%;
+    clear: both;
+    margin-top: 90px;
+    border-top: 1px solid #999999;
+    font-size: 18px;
+}
+#hr{
+    border-top: 1px solid #999999;
+}
+#remote{
+    border-top: 1px solid #999999;
+    font: "微軟正黑體";
+    color: #80e200;
+}
+
+#maintenance{
+    height: 5%;
+    left: 2px;
+    position: relative;
+    width: 50px;
+    font-size: 18px;
+}
+
+
+.Control-Panel{
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+
+
+
+.onoffswitch {
+    text-align: left;
+    position: relative; width: 94px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid ; border-radius: 10px;
+}
+
+
+
+.onoffswitch-inner ,.onoffswitch-innerA,.onoffswitch-innerB,.onoffswitch-innerC{
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after ,.onoffswitch-innerA:after ,.onoffswitch-innerA:before,.onoffswitch-innerB:after ,.onoffswitch-innerB:before,.onoffswitch-innerC:after ,.onoffswitch-innerC:before{
+    display: block; float: left; width: 50%; height: 34px; padding: 0; line-height: 34px;
+    font-size: 23px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before ,.onoffswitch-innerA:before,.onoffswitch-innerB:before,.onoffswitch-innerC:before{
+    content: "ON";
+    padding-left: 9px;
+    background-color: #66C2FF; color: #FFFFFF;
+}
+.onoffswitch-inner:after ,.onoffswitch-innerA:after,.onoffswitch-innerB:after,.onoffswitch-innerC:after{
+    content: "OFF";
+    padding-right: 9px;
+    background-color: #ABABAB; color: #FFFFFF;
+    text-align: right;
+}
+.onoffswitch-switch ,.onoffswitch-switchA,.onoffswitch-switchB,.onoffswitch-switchC{
+    display: block; width: 23px; margin: 5.5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid ; border-radius: 10px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-innerA {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switchA {
+    right: 0px; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-innerB {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switchB {
+    right: 0px; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-innerC {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switchC {
+    right: 0px; 
+}
+
+
+
+
+.myButton {
+	
+	-moz-border-radius:42px;
+	-webkit-border-radius:42px;
+	border-radius:42px;
+	border:2px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	padding:13px 17px;
+	text-decoration:none;
+	text-shadow:1px 3px 8px #000000;
+}
+.AC-power{
+    background-color:#de5454;
+}
+.AC-up{
+    background-color:#f37500;
+}
+.AC-down{
+    background-color:#00a6f3;
+}
+.myButton:hover {
+	background-color:#bd2a2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}

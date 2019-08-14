@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta content="url=http://$MyIP$/iframe/">
+</head>
+
+<body>
+
+    <H2>--isPLC 接點監視--</H2>
+    <style type="text/css">
+        H2 {
+            color: #00c0e2;
+        }
+    </style>
+    <p>
+        $X2$門&nbsp;$X3$窗戶
+    </p>
+
+    <p>
+            $X0$X0&nbsp;$X1$X1&nbsp;$X2$X2&nbsp;$X3$X3&nbsp;$X4$X4&nbsp;$X5$X5<br />
+            $Y0$Y0&nbsp;$Y1$Y1&nbsp;$Y2$Y2&nbsp;$Y3$Y3&nbsp;$Y4$Y4&nbsp;$Y5$Y5<br />
+            <table border="1" width="300" align="center" style="background-color:lightgreen;">
+                <tr>
+                    <td id="RefreshM" colspan="2">M15~M0=$M0_COIL$</td>
+                </tr>
+                <tr>
+                    <td >X7~X0=$X_COIL$</td>
+                    <td>Y7~Y0=$Y_COIL$</td>
+                </tr>
+                <tr>
+                    <td>D0=$D0$</td>
+                    <td id="RefreshD2">D1=$D1$</td>
+                </tr>
+                <tr>
+                    <td id="RefreshD1">D2=$D2$</td>
+                    <td>D3=$D3$</td>
+                </tr>
+                <tr>
+                    <td>D4=$D4$</td>
+                    <td>D5=$D5$</td>
+                </tr>
+            </table>
+        </p>
+</body>
