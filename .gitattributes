@@ -3,3 +3,4 @@
 *.application binary
 *.deploy binary
 *.config binary
+*.manifest binary
