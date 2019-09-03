@@ -8,7 +8,7 @@
 #                                                 /____/
 #
 # Title of your website
-title: 'TechWolf Blog'
+title: 'LarsHagrid's Blog'
 
 # The slogan describes your website and is used on homepage in <title> and other important places
 slogan: '分享我所學到的事物'
@@ -23,7 +23,7 @@ credits: '<p>Created with &hearts; by <a href="http://phlow.de/">Phlow</a> with 
 
 # Main author of the website
 # See > authors.yml
-author: TechWolf
+author: LarsHagrid
 
 # This URL is the main address for absolute links. Don't include a slash at the end.
 #
