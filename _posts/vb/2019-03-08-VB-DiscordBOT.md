@@ -1,7 +1,7 @@
 ---
 layout: page-fullwidth
 subheadline:  "DiscordBOT"
-title:  "使用vb製作一個屬於自己的DsicordBOT (一)"
+title:  "使用vb製作一個屬於自己的DiscordBOT (一)"
 teaser: "製作第一個 Discord BOT ! "
 image:  
     thumb: "discord.png" 
